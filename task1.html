@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumya's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 70px;
+            background-color: rgb(43, 43, 164);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: lavender;
+        }
+        
+        nav ul li a:hover {
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .left {
+            font-size: 1.5rem;
+        }
+        
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 140px 0;
+        }
+        
+        .leftsection {
+            width: 30%;
+            font-size: 3rem;
+        }
+        
+        .leftsection .btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #080716;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        
+        .rightsection {
+            width: 30%;
+            text-align: center;
+            margin-left: 20px;
+        }
+        
+        .rightsection img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .purple {
+            color: rgb(129, 64, 190);
+        }
+        
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            padding-top: 50px;
+        }
+        
+        hr {
+            margin: 60px 84px;
+            border: none;
+            border-top: 1px solid #9c97f1;
+        }
+        
+        .text-gray {
+            color: gray;
+        }
+        
+        .secondsection .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            margin: 55px 0;
+            padding: 20px;
+        }
+        
+        .vertical {
+            border-left: 1px solid white;
+            padding-left: 20px;
+            margin-left: 20px;
+            transition: height 0.3s ease;
+            /* Smooth transition for height change */
+            height: 60px;
+            /* Initial height of the box */
+            overflow: hidden;
+            /* Hide overflow content */
+        }
+        
+        .vertical:hover {
+            height: 120px;
+            /* Expanded height on hover */
+        }
+        
+        .buttons {
+            margin-top: 20px;
+        }
+        
+        .footer {
+            background-color: #0f1519;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .github-link a {
+            color: #9c97f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .github-link a:hover {
+            color: white;
+        }
+        
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-box h1 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #080716;
+            color: white;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #9c97f1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 6px;
+        }
+        
+        .form-group input[type="submit"]:hover {
+            background-color: #7d75c7;
+        }
+        
+        .box :hover {
+            overflow-y: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Soumya's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="#project-section">Project</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Soumya</span>
+                <div>and I am a web developer</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn" onclick="window.open('https://github.com/your-username', '_blank')">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="pg.png" alt="Profile Picture">
+                <div class="box"></div>
+            </div>
+        </section>
+        <hr>
+        <section id="project-section" class="secondsection">
+            <span class="text-gray">Projects</span>
+            <h1>My Projects</h1>
+            <div class="box">
+                <div class="vertical">Ecommerce website</div>
+                <div class="vertical">Portfolio website</div>
+                <div class="vertical">Learning website</div>
+            </div>
+        </section>
+        <hr>
+        <section id="skills-section" class="secondsection">
+            <span class="text-gray">Skills</span>
+            <h1>My Skills</h1>
+            <div class="box">
+                <div class="vertical">HTML/CSS/JavaScript</div>
+                <div class="vertical">Java, C++, Python</div>
+                <div class="vertical">React</div>
+                <div class="vertical">Node.js, UX Design</div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact-section">
+            <div class="form-container">
+                <h1>Contact Me</h1>
+                <form id="contact-form" method="post" action="#">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <h3>Soumya's Portfolio</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com/your-username" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://instagram.com/your-username" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://twitter.com/your-username" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            </div>
+            <p class="copyright">© 2024 Soumya. All rights reserved.</p>
+        </div>
+    </footer>
